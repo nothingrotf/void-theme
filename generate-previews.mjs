@@ -136,6 +136,29 @@ function esc(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 }
 
+// Split a token into sub-tokens separating whitespace from visible text
+// so SVG whitespace stripping doesn't break positioning
+function splitToken(type, text) {
+  const parts = []
+  let i = 0
+  while (i < text.length) {
+    if (text[i] === ' ') {
+      let j = i
+      while (j < text.length && text[j] === ' ') j++
+      parts.push([type, text.slice(i, j), true]) // whitespace
+      i = j
+    } else {
+      let j = i
+      while (j < text.length && text[j] !== ' ') j++
+      parts.push([type, text.slice(i, j), false]) // visible
+      i = j
+    }
+  }
+  return parts
+}
+
+const FONT = "'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace"
+
 function generateSVG(v) {
   const totalLines = lines.length
   const height = TITLE_H + totalLines * LH + 20
@@ -146,21 +169,14 @@ function generateSVG(v) {
     <clipPath id="frame"><rect width="${W}" height="${height}" rx="10"/></clipPath>
   </defs>
   <g clip-path="url(#frame)">
-    <!-- Background -->
     <rect width="${W}" height="${height}" fill="${v.bg}"/>
-
-    <!-- Title bar -->
     <rect width="${W}" height="${TITLE_H}" fill="${v.titleBg}"/>
     <circle cx="20" cy="18" r="6" fill="${v.dots[0]}"/>
     <circle cx="40" cy="18" r="6" fill="${v.dots[1]}"/>
     <circle cx="60" cy="18" r="6" fill="${v.dots[2]}"/>
     <text x="400" y="23" font-family="'SF Pro', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="${v.titleText}" text-anchor="middle">server.ts</text>
     <line x1="0" y1="${TITLE_H}" x2="${W}" y2="${TITLE_H}" stroke="${v.sep}" stroke-width="1"/>
-
-    <!-- Gutter separator -->
     <line x1="${GUTTER}" y1="${TITLE_H}" x2="${GUTTER}" y2="${height}" stroke="${v.sep}" stroke-width="1"/>
-
-    <!-- Active line highlight -->
     <rect x="0" y="${TITLE_H + activeLineIdx * LH}" width="${W}" height="${LH}" fill="${v.activeLine}"/>
 `
 
@@ -171,7 +187,7 @@ function generateSVG(v) {
     const isActive = i === activeLineIdx
     const color = isActive ? v.lnActive : v.lnColor
     const weight = isActive ? ' font-weight="bold"' : ''
-    svg += `    <text x="${GUTTER - 8}" y="${y}" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="${color}" text-anchor="end"${weight}>${num}</text>\n`
+    svg += `    <text x="${GUTTER - 8}" y="${y}" font-family="${FONT}" font-size="13" fill="${color}" text-anchor="end"${weight}>${num}</text>\n`
   }
 
   // Code lines
@@ -183,11 +199,18 @@ function generateSVG(v) {
     let col = 0
 
     for (const [type, text] of tokens) {
-      const x = PAD_X + col * CH
-      const color = v.colors[type] || v.colors.x
-      const italic = type === 'cm' ? ' font-style="italic"' : ''
-      svg += `    <text x="${x.toFixed(1)}" y="${y}" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="${color}"${italic}>${esc(text)}</text>\n`
-      col += text.length
+      // Split token to separate whitespace from visible chars
+      const parts = splitToken(type, text)
+      for (const [pType, pText, isSpace] of parts) {
+        if (!isSpace) {
+          // Only render visible characters
+          const x = PAD_X + col * CH
+          const color = v.colors[pType] || v.colors.x
+          const italic = pType === 'cm' ? ' font-style="italic"' : ''
+          svg += `    <text x="${x.toFixed(1)}" y="${y}" font-family="${FONT}" font-size="13" fill="${color}"${italic}>${esc(pText)}</text>\n`
+        }
+        col += pText.length
+      }
     }
   }
 
