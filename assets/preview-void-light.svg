@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <style>
+      .ln { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; fill: #b0b0b0; text-anchor: end; }
+      .ln-a { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; fill: #393a34; text-anchor: end; }
+      .c { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; }
+      .kw { fill: #ab5959; }
+      .s { fill: #1a7f37; }
+      .f { fill: #8b5cf6; }
+      .t { fill: #8b5cf6; }
+      .n { fill: #2e86de; }
+      .b { fill: #2e86de; }
+      .p { fill: #2e86de; }
+      .cm { fill: #a0ada0; font-style: italic; }
+      .pm { fill: #b56c1a; }
+      .o { fill: #ab5959; }
+      .x { fill: #393a34; }
+      .tl { fill: #2e86de; }
+      .tt { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; fill: #b0b0b0; text-anchor: middle; }
+    </style>
+    <clipPath id="frame">
+      <rect width="800" height="480" rx="8"/>
+    </clipPath>
+    <clipPath id="code-area">
+      <rect x="0" y="36" width="800" height="444"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="800" height="480" fill="#ffffff"/>
+    <rect x="0" y="0" width="800" height="36" fill="#ffffff"/>
+    <line x1="0" y1="36" x2="800" y2="36" stroke="#e8e8e8" stroke-width="1"/>
+    <circle cx="20" cy="18" r="6" fill="#ec6a5e"/>
+    <circle cx="40" cy="18" r="6" fill="#f4bf4f"/>
+    <circle cx="60" cy="18" r="6" fill="#61c554"/>
+    <text x="400" y="22" class="tt">server.ts</text>
+    <line x1="48" y1="36" x2="48" y2="480" stroke="#e8e8e8" stroke-width="1"/>
+    <rect x="0" y="216" width="800" height="20" fill="#00000006"/>
+
+    <g clip-path="url(#code-area)">
+      <text x="40" y="52" class="ln">1</text>
+      <text x="40" y="72" class="ln">2</text>
+      <text x="40" y="92" class="ln">3</text>
+      <text x="40" y="112" class="ln">4</text>
+      <text x="40" y="132" class="ln">5</text>
+      <text x="40" y="152" class="ln">6</text>
+      <text x="40" y="172" class="ln">7</text>
+      <text x="40" y="192" class="ln">8</text>
+      <text x="40" y="212" class="ln">9</text>
+      <text x="40" y="232" class="ln-a">10</text>
+      <text x="40" y="252" class="ln">11</text>
+      <text x="40" y="272" class="ln">12</text>
+      <text x="40" y="292" class="ln">13</text>
+      <text x="40" y="312" class="ln">14</text>
+      <text x="40" y="332" class="ln">15</text>
+      <text x="40" y="352" class="ln">16</text>
+      <text x="40" y="372" class="ln">17</text>
+      <text x="40" y="392" class="ln">18</text>
+      <text x="40" y="412" class="ln">19</text>
+      <text x="40" y="432" class="ln">20</text>
+      <text x="40" y="452" class="ln">21</text>
+      <text x="40" y="472" class="ln">22</text>
+
+      <text y="52" class="c"><tspan x="60" class="kw">import</tspan><tspan class="x"> { </tspan><tspan class="f">createServer</tspan><tspan class="x"> } </tspan><tspan class="kw">from</tspan><tspan class="x"> </tspan><tspan class="s">"node:http"</tspan></text>
+      <text y="92" class="c"><tspan x="60" class="kw">interface</tspan><tspan class="x"> </tspan><tspan class="t">Config</tspan><tspan class="x"> {</tspan></text>
+      <text y="112" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">port</tspan><tspan class="x">: </tspan><tspan class="t">number</tspan></text>
+      <text y="132" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">host</tspan><tspan class="x">: </tspan><tspan class="t">string</tspan></text>
+      <text y="152" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">debug</tspan><tspan class="x">?: </tspan><tspan class="t">boolean</tspan></text>
+      <text y="172" class="c"><tspan x="60" class="x">}</tspan></text>
+      <text y="212" class="c"><tspan x="60" class="cm">// Start the development server</tspan></text>
+      <text y="232" class="c"><tspan x="60" class="kw">const</tspan><tspan class="x"> config: </tspan><tspan class="t">Config</tspan><tspan class="x"> </tspan><tspan class="o">=</tspan><tspan class="x"> {</tspan></text>
+      <text y="252" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">port</tspan><tspan class="x">: </tspan><tspan class="n">3000</tspan><tspan class="x">,</tspan></text>
+      <text y="272" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">host</tspan><tspan class="x">: </tspan><tspan class="s">"localhost"</tspan><tspan class="x">,</tspan></text>
+      <text y="292" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">debug</tspan><tspan class="x">: </tspan><tspan class="b">true</tspan><tspan class="x">,</tspan></text>
+      <text y="312" class="c"><tspan x="60" class="x">}</tspan></text>
+      <text y="352" class="c"><tspan x="60" class="kw">async</tspan><tspan class="x"> </tspan><tspan class="kw">function</tspan><tspan class="x"> </tspan><tspan class="f">startServer</tspan><tspan class="x">(</tspan><tspan class="pm">cfg</tspan><tspan class="x">: </tspan><tspan class="t">Config</tspan><tspan class="x">) {</tspan></text>
+      <text y="372" class="c"><tspan x="60" class="x">  </tspan><tspan class="kw">const</tspan><tspan class="x"> server </tspan><tspan class="o">=</tspan><tspan class="x"> </tspan><tspan class="f">createServer</tspan><tspan class="x">((</tspan><tspan class="pm">req</tspan><tspan class="x">, </tspan><tspan class="pm">res</tspan><tspan class="x">) </tspan><tspan class="o">=&gt;</tspan><tspan class="x"> {</tspan></text>
+      <text y="392" class="c"><tspan x="60" class="x">    </tspan><tspan class="pm">res</tspan><tspan class="x">.</tspan><tspan class="f">writeHead</tspan><tspan class="x">(</tspan><tspan class="n">200</tspan><tspan class="x">, { </tspan><tspan class="s">"Content-Type"</tspan><tspan class="x">: </tspan><tspan class="s">"text/plain"</tspan><tspan class="x"> })</tspan></text>
+      <text y="412" class="c"><tspan x="60" class="x">    </tspan><tspan class="pm">res</tspan><tspan class="x">.</tspan><tspan class="f">end</tspan><tspan class="x">(</tspan><tspan class="tl">`Running on ${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">host</tspan><tspan class="tl">}:${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">port</tspan><tspan class="tl">}`</tspan><tspan class="x">)</tspan></text>
+      <text y="432" class="c"><tspan x="60" class="x">  })</tspan></text>
+      <text y="452" class="c"><tspan x="60" class="x">  server.</tspan><tspan class="f">listen</tspan><tspan class="x">(</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">port</tspan><tspan class="x">, </tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">host</tspan><tspan class="x">)</tspan></text>
+      <text y="472" class="c"><tspan x="60" class="x">  console.</tspan><tspan class="f">log</tspan><tspan class="x">(</tspan><tspan class="tl">`Server ready at http://${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">host</tspan><tspan class="tl">}:${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">port</tspan><tspan class="tl">}`</tspan><tspan class="x">)</tspan></text>
+    </g>
+  </g>
+</svg>
