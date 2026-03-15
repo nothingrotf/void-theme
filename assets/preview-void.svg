@@ -1,137 +1,174 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="576" viewBox="0 0 800 576">
   <defs>
-    <style>
-      .ln { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; fill: #6e6d62; text-anchor: end; }
-      .ln-a { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; fill: #ededed; text-anchor: end; }
-      .c { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; }
-      .kw { fill: #f75f8f; }
-      .s { fill: #62c073; }
-      .f { fill: #c472fb; }
-      .t { fill: #c472fb; }
-      .n { fill: #52a8ff; }
-      .b { fill: #52a8ff; }
-      .p { fill: #52a8ff; }
-      .cm { fill: #758575; font-style: italic; }
-      .pm { fill: #ff9907; }
-      .o { fill: #f75f8f; }
-      .x { fill: #ededed; }
-      .tl { fill: #1da9b0; }
-      .tt { font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; fill: #6e6d62; text-anchor: middle; }
-    </style>
-    <clipPath id="code-area">
-      <rect x="0" y="36" width="800" height="444" rx="0"/>
-    </clipPath>
-    <clipPath id="frame">
-      <rect width="800" height="480" rx="8"/>
-    </clipPath>
+    <clipPath id="frame"><rect width="800" height="576" rx="10"/></clipPath>
   </defs>
-
   <g clip-path="url(#frame)">
     <!-- Background -->
-    <rect width="800" height="480" fill="#000000"/>
+    <rect width="800" height="576" fill="#000000"/>
 
     <!-- Title bar -->
-    <line x1="0" y1="36" x2="800" y2="36" stroke="#1a1a1a" stroke-width="1"/>
+    <rect width="800" height="36" fill="#000000"/>
     <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
     <circle cx="40" cy="18" r="6" fill="#febc2e"/>
     <circle cx="60" cy="18" r="6" fill="#28c840"/>
-    <text x="400" y="22" class="tt">server.ts</text>
+    <text x="400" y="23" font-family="'SF Pro', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#6e6d62" text-anchor="middle">server.ts</text>
+    <line x1="0" y1="36" x2="800" y2="36" stroke="#1a1a1a" stroke-width="1"/>
 
     <!-- Gutter separator -->
-    <line x1="48" y1="36" x2="48" y2="480" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="52" y1="36" x2="52" y2="576" stroke="#1a1a1a" stroke-width="1"/>
 
-    <!-- Active line highlight (line 10) -->
-    <rect x="0" y="216" width="800" height="20" fill="#ffffff06"/>
-
-    <g clip-path="url(#code-area)">
-      <!-- Line numbers: y = 36 + (lineNum - 1) * 20 + 16 -->
-      <text x="40" y="52" class="ln">1</text>
-      <text x="40" y="72" class="ln">2</text>
-      <text x="40" y="92" class="ln">3</text>
-      <text x="40" y="112" class="ln">4</text>
-      <text x="40" y="132" class="ln">5</text>
-      <text x="40" y="152" class="ln">6</text>
-      <text x="40" y="172" class="ln">7</text>
-      <text x="40" y="192" class="ln">8</text>
-      <text x="40" y="212" class="ln">9</text>
-      <text x="40" y="232" class="ln-a">10</text>
-      <text x="40" y="252" class="ln">11</text>
-      <text x="40" y="272" class="ln">12</text>
-      <text x="40" y="292" class="ln">13</text>
-      <text x="40" y="312" class="ln">14</text>
-      <text x="40" y="332" class="ln">15</text>
-      <text x="40" y="352" class="ln">16</text>
-      <text x="40" y="372" class="ln">17</text>
-      <text x="40" y="392" class="ln">18</text>
-      <text x="40" y="412" class="ln">19</text>
-      <text x="40" y="432" class="ln">20</text>
-      <text x="40" y="452" class="ln">21</text>
-      <text x="40" y="472" class="ln">22</text>
-
-      <!-- Line 1: import { createServer } from "node:http" -->
-      <text y="52" class="c"><tspan x="60" class="kw">import</tspan><tspan class="x"> { </tspan><tspan class="f">createServer</tspan><tspan class="x"> } </tspan><tspan class="kw">from</tspan><tspan class="x"> </tspan><tspan class="s">"node:http"</tspan></text>
-
-      <!-- Line 2: empty -->
-
-      <!-- Line 3: interface Config { -->
-      <text y="92" class="c"><tspan x="60" class="kw">interface</tspan><tspan class="x"> </tspan><tspan class="t">Config</tspan><tspan class="x"> {</tspan></text>
-
-      <!-- Line 4:   port: number -->
-      <text y="112" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">port</tspan><tspan class="x">: </tspan><tspan class="t">number</tspan></text>
-
-      <!-- Line 5:   host: string -->
-      <text y="132" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">host</tspan><tspan class="x">: </tspan><tspan class="t">string</tspan></text>
-
-      <!-- Line 6:   debug?: boolean -->
-      <text y="152" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">debug</tspan><tspan class="x">?: </tspan><tspan class="t">boolean</tspan></text>
-
-      <!-- Line 7: } -->
-      <text y="172" class="c"><tspan x="60" class="x">}</tspan></text>
-
-      <!-- Line 8: empty -->
-
-      <!-- Line 9: // Start the development server -->
-      <text y="212" class="c"><tspan x="60" class="cm">// Start the development server</tspan></text>
-
-      <!-- Line 10: const config: Config = { -->
-      <text y="232" class="c"><tspan x="60" class="kw">const</tspan><tspan class="x"> config: </tspan><tspan class="t">Config</tspan><tspan class="x"> </tspan><tspan class="o">=</tspan><tspan class="x"> {</tspan></text>
-
-      <!-- Line 11:   port: 3000, -->
-      <text y="252" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">port</tspan><tspan class="x">: </tspan><tspan class="n">3000</tspan><tspan class="x">,</tspan></text>
-
-      <!-- Line 12:   host: "localhost", -->
-      <text y="272" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">host</tspan><tspan class="x">: </tspan><tspan class="s">"localhost"</tspan><tspan class="x">,</tspan></text>
-
-      <!-- Line 13:   debug: true, -->
-      <text y="292" class="c"><tspan x="60" class="x">  </tspan><tspan class="p">debug</tspan><tspan class="x">: </tspan><tspan class="b">true</tspan><tspan class="x">,</tspan></text>
-
-      <!-- Line 14: } -->
-      <text y="312" class="c"><tspan x="60" class="x">}</tspan></text>
-
-      <!-- Line 15: empty -->
-
-      <!-- Line 16: async function startServer(cfg: Config) { -->
-      <text y="352" class="c"><tspan x="60" class="kw">async</tspan><tspan class="x"> </tspan><tspan class="kw">function</tspan><tspan class="x"> </tspan><tspan class="f">startServer</tspan><tspan class="x">(</tspan><tspan class="pm">cfg</tspan><tspan class="x">: </tspan><tspan class="t">Config</tspan><tspan class="x">) {</tspan></text>
-
-      <!-- Line 17:   const server = createServer((req, res) => { -->
-      <text y="372" class="c"><tspan x="60" class="x">  </tspan><tspan class="kw">const</tspan><tspan class="x"> server </tspan><tspan class="o">=</tspan><tspan class="x"> </tspan><tspan class="f">createServer</tspan><tspan class="x">((</tspan><tspan class="pm">req</tspan><tspan class="x">, </tspan><tspan class="pm">res</tspan><tspan class="x">) </tspan><tspan class="o">=&gt;</tspan><tspan class="x"> {</tspan></text>
-
-      <!-- Line 18:     res.writeHead(200, { "Content-Type": "text/plain" }) -->
-      <text y="392" class="c"><tspan x="60" class="x">    </tspan><tspan class="pm">res</tspan><tspan class="x">.</tspan><tspan class="f">writeHead</tspan><tspan class="x">(</tspan><tspan class="n">200</tspan><tspan class="x">, { </tspan><tspan class="s">"Content-Type"</tspan><tspan class="x">: </tspan><tspan class="s">"text/plain"</tspan><tspan class="x"> })</tspan></text>
-
-      <!-- Line 19:     res.end(`Running on ${cfg.host}:${cfg.port}`) -->
-      <text y="412" class="c"><tspan x="60" class="x">    </tspan><tspan class="pm">res</tspan><tspan class="x">.</tspan><tspan class="f">end</tspan><tspan class="x">(</tspan><tspan class="tl">`Running on ${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">host</tspan><tspan class="tl">}:${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">port</tspan><tspan class="tl">}`</tspan><tspan class="x">)</tspan></text>
-
-      <!-- Line 20:   }) -->
-      <text y="432" class="c"><tspan x="60" class="x">  })</tspan></text>
-
-      <!-- Line 21: empty -->
-
-      <!-- Line 22:   server.listen(cfg.port, cfg.host) -->
-      <text y="452" class="c"><tspan x="60" class="x">  server.</tspan><tspan class="f">listen</tspan><tspan class="x">(</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">port</tspan><tspan class="x">, </tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">host</tspan><tspan class="x">)</tspan></text>
-
-      <!-- Line 23:   console.log(`Server ready...`) -->
-      <text y="472" class="c"><tspan x="60" class="x">  console.</tspan><tspan class="f">log</tspan><tspan class="x">(</tspan><tspan class="tl">`Server ready at http://${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">host</tspan><tspan class="tl">}:${</tspan><tspan class="pm">cfg</tspan><tspan class="x">.</tspan><tspan class="p">port</tspan><tspan class="tl">}`</tspan><tspan class="x">)</tspan></text>
-    </g>
+    <!-- Active line highlight -->
+    <rect x="0" y="216" width="800" height="20" fill="#ffffff08"/>
+    <text x="44" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">1</text>
+    <text x="44" y="71" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">2</text>
+    <text x="44" y="91" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">3</text>
+    <text x="44" y="111" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">4</text>
+    <text x="44" y="131" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">5</text>
+    <text x="44" y="151" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">6</text>
+    <text x="44" y="171" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">7</text>
+    <text x="44" y="191" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">8</text>
+    <text x="44" y="211" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">9</text>
+    <text x="44" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed" text-anchor="end" font-weight="bold">10</text>
+    <text x="44" y="251" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">11</text>
+    <text x="44" y="271" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">12</text>
+    <text x="44" y="291" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">13</text>
+    <text x="44" y="311" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">14</text>
+    <text x="44" y="331" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">15</text>
+    <text x="44" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">16</text>
+    <text x="44" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">17</text>
+    <text x="44" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">18</text>
+    <text x="44" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">19</text>
+    <text x="44" y="431" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">20</text>
+    <text x="44" y="451" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">21</text>
+    <text x="44" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">22</text>
+    <text x="44" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">23</text>
+    <text x="44" y="511" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">24</text>
+    <text x="44" y="531" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">25</text>
+    <text x="44" y="551" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#6e6d62" text-anchor="end">26</text>
+    <text x="62.0" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">import</text>
+    <text x="108.8" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> { </text>
+    <text x="132.2" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">createServer</text>
+    <text x="225.8" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> } </text>
+    <text x="249.2" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">from</text>
+    <text x="280.4" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> </text>
+    <text x="288.2" y="51" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#62c073">&quot;node:http&quot;</text>
+    <text x="62.0" y="91" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">interface</text>
+    <text x="132.2" y="91" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> </text>
+    <text x="140.0" y="91" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">Config</text>
+    <text x="186.8" y="91" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> {</text>
+    <text x="62.0" y="111" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="111" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">port</text>
+    <text x="108.8" y="111" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="124.4" y="111" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">number</text>
+    <text x="62.0" y="131" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="131" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">host</text>
+    <text x="108.8" y="131" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="124.4" y="131" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">string</text>
+    <text x="62.0" y="151" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="151" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">debug</text>
+    <text x="116.6" y="151" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">?: </text>
+    <text x="140.0" y="151" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">boolean</text>
+    <text x="62.0" y="171" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">}</text>
+    <text x="62.0" y="211" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#758575" font-style="italic">// Start the development server</text>
+    <text x="62.0" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">const</text>
+    <text x="101.0" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> config</text>
+    <text x="155.6" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="171.2" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">Config</text>
+    <text x="218.0" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> </text>
+    <text x="225.8" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">=</text>
+    <text x="233.6" y="231" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> {</text>
+    <text x="62.0" y="251" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="251" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">port</text>
+    <text x="108.8" y="251" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="124.4" y="251" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">3000</text>
+    <text x="155.6" y="251" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">,</text>
+    <text x="62.0" y="271" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="271" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">host</text>
+    <text x="108.8" y="271" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="124.4" y="271" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#62c073">&quot;localhost&quot;</text>
+    <text x="210.2" y="271" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">,</text>
+    <text x="62.0" y="291" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="291" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">debug</text>
+    <text x="116.6" y="291" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="132.2" y="291" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">true</text>
+    <text x="163.4" y="291" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">,</text>
+    <text x="62.0" y="311" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">}</text>
+    <text x="62.0" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">async</text>
+    <text x="101.0" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> </text>
+    <text x="108.8" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">function</text>
+    <text x="171.2" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> </text>
+    <text x="179.0" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">startServer</text>
+    <text x="264.8" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">(</text>
+    <text x="272.6" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="296.0" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="311.6" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">Config</text>
+    <text x="358.4" y="351" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">) {</text>
+    <text x="62.0" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  </text>
+    <text x="77.6" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">const</text>
+    <text x="116.6" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> server </text>
+    <text x="179.0" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">=</text>
+    <text x="186.8" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> </text>
+    <text x="194.6" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">createServer</text>
+    <text x="288.2" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">((</text>
+    <text x="303.8" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">req</text>
+    <text x="327.2" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">, </text>
+    <text x="342.8" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">res</text>
+    <text x="366.2" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">) </text>
+    <text x="381.8" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#f75f8f">=&gt;</text>
+    <text x="397.4" y="371" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> {</text>
+    <text x="62.0" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">    </text>
+    <text x="93.2" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">res</text>
+    <text x="116.6" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="124.4" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">writeHead</text>
+    <text x="194.6" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">(</text>
+    <text x="202.4" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">200</text>
+    <text x="225.8" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">, { </text>
+    <text x="257.0" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#62c073">&quot;Content-Type&quot;</text>
+    <text x="366.2" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">: </text>
+    <text x="381.8" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#62c073">&quot;text/plain&quot;</text>
+    <text x="475.4" y="391" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed"> })</text>
+    <text x="62.0" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">    </text>
+    <text x="93.2" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">res</text>
+    <text x="116.6" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="124.4" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">end</text>
+    <text x="147.8" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">(</text>
+    <text x="155.6" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#1da9b0">`Running on ${</text>
+    <text x="264.8" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="288.2" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="296.0" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">host</text>
+    <text x="327.2" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#1da9b0">}:${</text>
+    <text x="358.4" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="381.8" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="389.6" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">port</text>
+    <text x="420.8" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#1da9b0">}`</text>
+    <text x="436.4" y="411" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">)</text>
+    <text x="62.0" y="431" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  })</text>
+    <text x="62.0" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  server.</text>
+    <text x="132.2" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">listen</text>
+    <text x="179.0" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">(</text>
+    <text x="186.8" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="210.2" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="218.0" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">port</text>
+    <text x="249.2" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">, </text>
+    <text x="264.8" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="288.2" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="296.0" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">host</text>
+    <text x="327.2" y="471" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">)</text>
+    <text x="62.0" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">  console.</text>
+    <text x="140.0" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">log</text>
+    <text x="163.4" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">(</text>
+    <text x="171.2" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#1da9b0">`Server ready at http://${</text>
+    <text x="374.0" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="397.4" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="405.2" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">host</text>
+    <text x="436.4" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#1da9b0">}:${</text>
+    <text x="467.6" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ff9907">cfg</text>
+    <text x="491.0" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">.</text>
+    <text x="498.8" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#52a8ff">port</text>
+    <text x="530.0" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#1da9b0">}`</text>
+    <text x="545.6" y="491" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">)</text>
+    <text x="62.0" y="511" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">}</text>
+    <text x="62.0" y="551" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#c472fb">startServer</text>
+    <text x="147.8" y="551" font-family="'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace" font-size="13" fill="#ededed">(config)</text>
   </g>
 </svg>
